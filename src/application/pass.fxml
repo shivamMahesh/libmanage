@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="448.0" prefWidth="649.0" style="-fx-background-color: #17141E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.pascontroller">
+   <children>
+      <ImageView fitHeight="448.0" fitWidth="649.0" layoutY="7.0" opacity="0.7">
+         <effect>
+            <BoxBlur height="3.04" width="18.21" />
+         </effect>
+         <image>
+            <Image url="@libimg/sa.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="240.0" layoutY="220.0" mnemonicParsing="false" onAction="#check" prefHeight="45.0" prefWidth="169.0" text="CHANGE PASSWORD">
+         <effect>
+            <Lighting diffuseConstant="0.95" specularConstant="0.39" specularExponent="40.0" surfaceScale="3.01">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Button>
+      <Label fx:id="label" alignment="CENTER" layoutX="103.0" layoutY="279.0" prefHeight="53.0" prefWidth="393.0" textAlignment="CENTER" textFill="WHITE" />
+      <PasswordField fx:id="pass" layoutX="225.0" layoutY="78.0" prefHeight="35.0" prefWidth="200.0" promptText="*PASSWORD" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Wingdings" size="16.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="pass1" layoutX="225.0" layoutY="124.0" prefHeight="35.0" prefWidth="200.0" promptText="*CONFIRM PASSWORD" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Wingdings" size="16.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="tok" layoutX="225.0" layoutY="170.0" prefHeight="35.0" prefWidth="200.0" promptText="*TOKEN" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Webdings" size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="214.0" layoutY="29.0" prefHeight="32.0" prefWidth="222.0" text="CHANGE PASSWORD" textFill="#c0da17">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="302.0" layoutY="344.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #D9E7FF;" text="BACK" />
+   </children>
+</AnchorPane>

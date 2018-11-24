@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="549.0" style="-fx-background-color: #17141E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.bookslistcontroller">
+   <children>
+      <ImageView fitHeight="348.0" fitWidth="549.0" opacity="0.7">
+         <image>
+            <Image url="@libimg/sa.png" />
+         </image>
+         <effect>
+            <BoxBlur height="3.04" width="18.21" />
+         </effect>
+      </ImageView>
+      <TextField layoutX="32.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #a6acaf;" text="ITEM ID" />
+      <TextField layoutX="96.0" layoutY="67.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #a6acaf;" text="TITLE" />
+      <TextField layoutX="216.0" layoutY="67.0" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #a6acaf;" text="AUTHOR" />
+      <TextField layoutX="300.0" layoutY="67.0" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #a6acaf;" text="PUB ID" />
+      <Button layoutX="32.0" layoutY="24.0" mnemonicParsing="false" onAction="#check" prefHeight="35.0" prefWidth="120.0" text="SHOW ITEMS">
+         <effect>
+            <Lighting light="$null" specularConstant="1.16" specularExponent="31.16">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Wingdings" size="15.0" />
+         </font></Button>
+      <ScrollPane layoutX="32.0" layoutY="92.0" prefHeight="187.0" prefWidth="502.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="189.0" prefWidth="508.0">
+               <children>
+                  <Label fx:id="l1" layoutX="8.0" layoutY="14.0" textOverrun="CLIP" />
+                  <Label fx:id="l2" layoutX="64.0" layoutY="14.0" />
+                  <Label fx:id="l3" layoutX="190.0" layoutY="14.0" />
+                  <Label fx:id="l4" layoutX="275.0" layoutY="14.0" />
+                  <Label fx:id="l5" layoutX="340.0" layoutY="14.0" />
+                  <Label fx:id="l6" layoutX="410.0" layoutY="14.0" />
+                  <Label fx:id="l7" layoutX="450.0" layoutY="14.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button layoutX="252.0" layoutY="287.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #D9E7FF;" text="BACK" />
+      <TextField layoutX="370.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #a6acaf;" text="TYPE" />
+      <TextField layoutX="473.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #a6acaf;" text="EDITION" />
+      <TextField layoutX="434.0" layoutY="67.0" prefHeight="25.0" prefWidth="39.0" style="-fx-background-color: #a6acaf;" text="QTY" />
+      <TextField fx:id="sf1" layoutX="167.0" layoutY="24.0" prefHeight="35.0" prefWidth="163.0" promptText="SEARCH BY TITLE" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Webdings" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="sf2" layoutX="345.0" layoutY="24.0" prefHeight="35.0" prefWidth="179.0" promptText="SEARCH BY AUTHOR" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Webdings" size="16.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

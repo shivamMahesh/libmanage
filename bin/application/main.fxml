@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="348.0" prefWidth="549.0" style="-fx-background-color: #17141E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.bookscontroller">
+   <children>
+      <ImageView fitHeight="348.0" fitWidth="549.0" layoutY="2.0" opacity="0.7">
+         <image>
+            <Image url="@libimg/sa.png" />
+         </image>
+         <effect>
+            <BoxBlur height="3.04" width="18.21" />
+         </effect>
+      </ImageView>
+      <TextField fx:id="ti" layoutX="31.0" layoutY="27.0" prefHeight="6.0" prefWidth="200.0" promptText="*TITLE" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Webdings" size="16.0" />
+         </font></TextField>
+      <Button layoutX="54.0" layoutY="266.0" mnemonicParsing="false" onAction="#check" prefHeight="17.0" prefWidth="169.0" text="ADD ITEM">
+         <effect>
+            <Lighting diffuseConstant="0.95" specularConstant="0.39" specularExponent="40.0" surfaceScale="3.01">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Button>
+      <TextField fx:id="ty" layoutX="31.0" layoutY="67.0" prefHeight="12.0" prefWidth="200.0" promptText="*TYPE" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Webdings" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="a" layoutX="31.0" layoutY="104.0" prefHeight="11.0" prefWidth="200.0" promptText="*AUTHOR" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Webdings" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="p" layoutX="31.0" layoutY="141.0" prefHeight="13.0" prefWidth="200.0" promptText="*PUBLISHER ID" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Webdings" size="16.0" />
+         </font></TextField>
+      <Label fx:id="itemlabel" alignment="CENTER" layoutX="316.0" layoutY="239.0" prefHeight="78.0" prefWidth="200.0" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Separator layoutX="286.0" layoutY="27.0" orientation="VERTICAL" prefHeight="307.0" prefWidth="7.0" />
+      <ImageView fitHeight="216.0" fitWidth="200.0" layoutX="316.0" layoutY="23.0">
+         <image>
+            <Image url="@libimg/ui.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="0.79" specularExponent="2.63" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#4951a4" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <Button layoutX="108.0" layoutY="301.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #D9E7FF;" text="BACK" />
+      <TextField fx:id="pr" layoutX="31.0" layoutY="218.0" prefHeight="6.0" prefWidth="200.0" promptText="*PRICE" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Webdings" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="e" layoutX="31.0" layoutY="176.0" prefHeight="6.0" prefWidth="200.0" promptText="*EDITION" style="-fx-background-color: #D9E7FF;">
+         <font>
+            <Font name="Webdings" size="16.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
