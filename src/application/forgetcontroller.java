@@ -54,7 +54,7 @@ public class forgetcontroller {
                 Parent root = FXMLLoader.load(getClass().getResource("/application/pass.fxml"));
                 Scene scene = new Scene(root, 400, 400);
                 scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-                Main.pm.setTitle("Search Member");
+                Main.pm.setTitle("Password");
                 Main.pm.setWidth(650);
                 Main.pm.setHeight(458);
                 Main.pm.setMaxWidth(650);

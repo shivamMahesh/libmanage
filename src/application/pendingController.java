@@ -3,6 +3,7 @@ import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 
 import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +16,9 @@ import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class pendingController {
     @FXML
@@ -101,6 +105,10 @@ public class pendingController {
             }
             in.close();
             conn.disconnect();
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Date date = new Date();
+            System.out.println(dateFormat.format(date));
+            doc.add(new Paragraph("      "+"    LIST OF PENDING ITEMS"+"      "+ "    TIME   "+dateFormat.format(date)));
             doc.add(table);
             doc.close();
             System.out.println("Table created successfully..");

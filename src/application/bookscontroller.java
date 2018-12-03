@@ -34,6 +34,7 @@ public class bookscontroller{
 		String pub_id = p.getText();
 		String edition = e.getText();
 		String price = pr.getText();
+		Boolean flag = true;
 		if (title.equals(""))
 			itemlabel.setText("TITLE NOT ENTERED");
 		else if (type.equals(""))
@@ -47,38 +48,53 @@ public class bookscontroller{
 		else if (price.equals(""))
 			itemlabel.setText("PRICE NOT ENTERED");
 		else {
-			String result = "PUBLISHER NOT FOUND";
-			String query_url = "http://localhost:3000/additem";
-			String json = "{" +
-					"\"title\" : \"" + title +
-					"\" ,\"author\" : \"" + author +
-					"\", \"type\" :\"" + type +
-					"\", \"price\" :\"" + price +
-					"\", \"edition\" :\"" + edition +
-					"\", \"pub_id\" :\"" + pub_id +
-					"\"}";
-
+		    flag=true;
 			try {
-				URL url = new URL(query_url);
-				HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-				conn.setConnectTimeout(5000);
-				conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-				conn.setDoOutput(true);
-				conn.setDoInput(true);
-				conn.setRequestMethod("POST");
-				OutputStream os = conn.getOutputStream();
-				os.write(json.getBytes("UTF-8"));
-				os.close();
-				// read the response
-				InputStream in = new BufferedInputStream(conn.getInputStream());
-				result = IOUtils.toString(in, "UTF-8");
-
-				itemlabel.setText("ADDED SUCCESSFULLY\n ID:" + result);
-				in.close();
-				conn.disconnect();
+				int a = Integer.parseInt(pub_id);
 			} catch (Exception e) {
-				System.out.println(e.getMessage());
-				itemlabel.setText(result);
+				flag = false;
+				itemlabel.setText("PUB_ID IS NOT INTEGER");
+			}
+			try {
+				int b = Integer.parseInt(price);
+			} catch (Exception e) {
+				flag = false;
+				itemlabel.setText("PRICE IS NOT INTEGER");
+			}
+			if (flag) {
+				String result = "PUBLISHER NOT FOUND";
+				String query_url = "http://localhost:3000/additem";
+				String json = "{" +
+						"\"title\" : \"" + title +
+						"\" ,\"author\" : \"" + author +
+						"\", \"type\" :\"" + type +
+						"\", \"price\" :\"" + price +
+						"\", \"edition\" :\"" + edition +
+						"\", \"pub_id\" :\"" + pub_id +
+						"\"}";
+
+				try {
+					URL url = new URL(query_url);
+					HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+					conn.setConnectTimeout(5000);
+					conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+					conn.setDoOutput(true);
+					conn.setDoInput(true);
+					conn.setRequestMethod("POST");
+					OutputStream os = conn.getOutputStream();
+					os.write(json.getBytes("UTF-8"));
+					os.close();
+					// read the response
+					InputStream in = new BufferedInputStream(conn.getInputStream());
+					result = IOUtils.toString(in, "UTF-8");
+
+					itemlabel.setText("ADDED SUCCESSFULLY\n ID:" + result);
+					in.close();
+					conn.disconnect();
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+					itemlabel.setText(result);
+				}
 			}
 		}
 	}

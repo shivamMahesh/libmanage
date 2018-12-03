@@ -23,7 +23,7 @@ public class interfacecontroller {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/main.fxml"));
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Main.pm.setTitle("Add New Book");
+			Main.pm.setTitle("Add New Item");
 			Main.pm.setWidth(574.0);
 			Main.pm.setHeight(385.0);
 			Main.pm.setMaxWidth(574.0);
@@ -35,7 +35,7 @@ public class interfacecontroller {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/member.fxml"));
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Main.pm.setTitle("Add New Member");
+			Main.pm.setTitle("Add New Publisher");
 			Main.pm.setWidth(574.0);
 			Main.pm.setHeight(385.0);
 			Main.pm.setMaxWidth(574.0);
@@ -46,7 +46,7 @@ public class interfacecontroller {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/issue.fxml"));
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Main.pm.setTitle("Book Issue");
+			Main.pm.setTitle("Issue Item");
 			Main.pm.setWidth(574.0);
 			Main.pm.setHeight(385.0);
 			Main.pm.setMaxWidth(574.0);
@@ -58,7 +58,7 @@ public class interfacecontroller {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/return.fxml"));
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Main.pm.setTitle("Book Return");
+			Main.pm.setTitle("Return Item");
 			Main.pm.setWidth(574.0);
 			Main.pm.setHeight(385.0);
 			Main.pm.setMaxWidth(574.0);
@@ -71,7 +71,7 @@ public class interfacecontroller {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/bookslist.fxml"));
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Main.pm.setTitle("Book List");
+			Main.pm.setTitle("Items List");
 			Main.pm.setWidth(574.0);
 			Main.pm.setHeight(385.0);
 			Main.pm.setMaxWidth(574.0);
@@ -129,7 +129,7 @@ public class interfacecontroller {
                 Parent root = FXMLLoader.load(getClass().getResource("/application/pass.fxml"));
                 Scene scene = new Scene(root, 400, 400);
                 scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-                Main.pm.setTitle("Search Member");
+                Main.pm.setTitle("Password");
                 Main.pm.setWidth(650);
                 Main.pm.setHeight(458);
                 Main.pm.setMaxWidth(650);
@@ -146,7 +146,7 @@ public class interfacecontroller {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/request.fxml"));
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Main.pm.setTitle("Search Member");
+			Main.pm.setTitle("Show Request");
 			Main.pm.setWidth(549);
 			Main.pm.setHeight(348);
 			Main.pm.setMaxWidth(549);
@@ -159,7 +159,7 @@ public class interfacecontroller {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/publisherlist.fxml"));
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Main.pm.setTitle("Search Member");
+			Main.pm.setTitle("Show Publisher");
 			Main.pm.setWidth(549);
 			Main.pm.setHeight(348);
 			Main.pm.setMaxWidth(549);
@@ -172,7 +172,7 @@ public class interfacecontroller {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/pending.fxml"));
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Main.pm.setTitle("Search Member");
+			Main.pm.setTitle("Pending items");
 			Main.pm.setWidth(549);
 			Main.pm.setHeight(348);
 			Main.pm.setMaxWidth(549);
@@ -185,7 +185,7 @@ public class interfacecontroller {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/reserve.fxml"));
 			Scene scene = new Scene(root, 400, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Main.pm.setTitle("Search Member");
+			Main.pm.setTitle("Reserve Items");
 			Main.pm.setWidth(549);
 			Main.pm.setHeight(348);
 			Main.pm.setMaxWidth(549);

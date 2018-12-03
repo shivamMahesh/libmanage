@@ -30,8 +30,8 @@
          </effect>
       </ImageView>
       <TextField layoutX="32.0" layoutY="67.0" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #a6acaf;" text="ITEM ID" />
-      <TextField layoutX="96.0" layoutY="67.0" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #a6acaf;" text="TITLE" />
-      <TextField layoutX="216.0" layoutY="67.0" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #a6acaf;" text="AUTHOR" />
+      <TextField layoutX="96.0" layoutY="67.0" prefHeight="25.0" prefWidth="107.0" style="-fx-background-color: #a6acaf;" text="TITLE" />
+      <TextField layoutX="202.0" layoutY="67.0" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #a6acaf;" text="AUTHOR" />
       <TextField layoutX="300.0" layoutY="67.0" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #a6acaf;" text="PUB ID" />
       <Button layoutX="32.0" layoutY="24.0" mnemonicParsing="false" onAction="#check" prefHeight="35.0" prefWidth="120.0" text="SHOW ITEMS">
          <effect>
@@ -50,7 +50,7 @@
                <children>
                   <Label fx:id="l1" layoutX="8.0" layoutY="14.0" textOverrun="CLIP" />
                   <Label fx:id="l2" layoutX="64.0" layoutY="14.0" />
-                  <Label fx:id="l3" layoutX="190.0" layoutY="14.0" />
+                  <Label fx:id="l3" layoutX="170.0" layoutY="14.0" />
                   <Label fx:id="l4" layoutX="275.0" layoutY="14.0" />
                   <Label fx:id="l5" layoutX="340.0" layoutY="14.0" />
                   <Label fx:id="l6" layoutX="410.0" layoutY="14.0" />
